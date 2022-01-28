@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<form action="login/" method="post">
+        {% csrf_token %}
+  <div class="container">
+  <center>  <h1> Register</h1> </center>
+  <hr>
+  <label> Firstname </label>
+<input type="text"  class="form-control" name="firstname" placeholder= "Firstname" size="15" required />
+<label> Lastname: </label>
+<input type="text"  class="form-control" name="lastname" placeholder="Lastname" size="15"required />
+
+<label> Username: </label>
+<input type="text"  class="form-control" name="username" placeholder="Username" size="15"required />
+
+
+ <label for="email"><b>Email</b></label>
+ <input type="text"  class="form-control" placeholder="Enter Email" name="email" required/>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password"  class="form-control" placeholder="Enter Password" name="password1" required/>
+
+    <label for="psw-repeat"><b>Re-type Password</b></label>
+    <input type="password"   class="form-control" placeholder="Retype Password" name="password2" required/>
+      <button type="submit" class="registerbtn" >Register</button>
+  </div>
+</form>
+</body>
+</html>
+<!--<html>-->
+<!--<head>-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta http-equiv="X-UA-Compatible"content="IE=edge">-->
+<!--    <title>Authentication</title>-->
+<!--    <meta name="description" content="">-->
+<!--    <meta name="viewport" content="width=device=width,initial-scale=1">-->
+<!--</head>-->
+<!--<body>-->
+<!--<h3>Register</h3>-->
+
+<!--<form action="/register/" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    <br>*-->
+<!--    <label for="">username</label>-->
+<!--    <input type="text" class="form-control"  id="username"  name="username" placeholder="create a username"Required>-->
+<!--    <br>*-->
+<!--    <label for="">First Name</label>-->
+<!--     <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your first name"Required>-->
+<!--    <br>*-->
+<!--    <label for="">Last Name</label>-->
+<!--     <input type="text" class="form-control" id="lname"  name="lname" placeholder="Enter your lirst name"Required>-->
+<!--    <br>*-->
+<!--    <label for="">Password</label>-->
+<!--     <input type="password" class="form-control" id="pass1" name="pass1" placeholder="create password"Required>-->
+<!--    <br>*-->
+<!--    <label for="">confirm your password</label>-->
+<!--     <input type="password" class="form-control"  id="pass2" name="pass2" placeholder="confirm your password"Required>-->
+<!--    <br>-->
+
+
+<!--<button type="submit">Register</button>-->
+<!--</form>-->
+<!--<script src="" async defer></script>-->
+<!--</body>-->
+<!--</html>-->
